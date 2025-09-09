@@ -49,13 +49,13 @@ export const mappool = {
 					{ name: "\u200B", value: "" },
 
 					{ name: ":rice: **RC maps:**", value: "\u200B" },
-					{ name: "", value: "**RC1** - [title [diff_name]](https://www.youtube.com/watch?v=dQw4w9WgXcQ)" },
-					{ name: "", value: "**RC1** - [title [diff_name]](https://www.youtube.com/watch?v=dQw4w9WgXcQ)" },
-					{ name: "", value: "**RC1** - [title [diff_name]](https://www.youtube.com/watch?v=dQw4w9WgXcQ)" },
-					{ name: "", value: "**RC1** - [title [diff_name]](https://www.youtube.com/watch?v=dQw4w9WgXcQ)" },
-					{ name: "", value: "**RC1** - [title [diff_name]](https://www.youtube.com/watch?v=dQw4w9WgXcQ)" },
-					{ name: "", value: "**RC1** - [title [diff_name]](https://www.youtube.com/watch?v=dQw4w9WgXcQ)" },
-					{ name: "", value: "**RC1** - [title [diff_name]](https://www.youtube.com/watch?v=dQw4w9WgXcQ)" },
+					{ name: "", value: "**RC1** - Speed - [title [diff_name]](https://www.youtube.com/watch?v=dQw4w9WgXcQ)" },
+					{ name: "", value: "**RC1** - Speed - [title [diff_name]](https://www.youtube.com/watch?v=dQw4w9WgXcQ)" },
+					{ name: "", value: "**RC1** - Speed - [title [diff_name]](https://www.youtube.com/watch?v=dQw4w9WgXcQ)" },
+					{ name: "", value: "**RC1** - Speed - [title [diff_name]](https://www.youtube.com/watch?v=dQw4w9WgXcQ)" },
+					{ name: "", value: "**RC1** - Speed - [title [diff_name]](https://www.youtube.com/watch?v=dQw4w9WgXcQ)" },
+					{ name: "", value: "**RC1** - Speed - [title [diff_name]](https://www.youtube.com/watch?v=dQw4w9WgXcQ)" },
+					{ name: "", value: "**RC1** - Speed - [title [diff_name]](https://www.youtube.com/watch?v=dQw4w9WgXcQ)" },
 
 					{ name: "\u200B", value: "" },
 

@@ -105,7 +105,10 @@ export const map = {
 					{ name: "", value: "**OD**: (od)" },
 					{ name: "", value: "**HP**: (hp)" },
 					{ name: "", value: "**Length**: (mm:ss)" }
-				]
+				],
+				footer: {
+					text: "Map Pattern: (pattern)"
+				}
 			});
 
 			await interaction.reply({ embeds: [embed] });
