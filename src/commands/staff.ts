@@ -93,7 +93,7 @@ export const staff = {
 			await interaction.reply({ embeds: [embed] });
 		}
 
-		if (sub === "update") {
+		if (sub === "change") {
 			const embed = new EmbedBuilder({
 				title: ":white_check_mark:    Successfully switched (player_name)'s role to (new_full_staff_role) from (old_full_staff_role)!",
 				color: strip_colors["success"]

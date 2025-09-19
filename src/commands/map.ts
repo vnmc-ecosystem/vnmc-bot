@@ -114,7 +114,7 @@ export const map = {
 			await interaction.reply({ embeds: [embed] });
 		}
 
-		if (sub === "create") {
+		if (sub === "add") {
 			const embed = new EmbedBuilder({
 				title: ":white_check_mark:    Successfully added new map to pool (full_round_name)!",
 				color: strip_colors["success"],
