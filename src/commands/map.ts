@@ -36,7 +36,7 @@ export const map = {
 				.setDescription("Map code")
 				.setRequired(true)
 			)
-			.addStringOption(option =>
+			.addNumberOption(option =>
 				option
 				.setName("map_id")
 				.setDescription("Beatmap ID")
@@ -58,7 +58,7 @@ export const map = {
 				.setDescription("Map code")
 				.setRequired(true)
 			)
-			.addStringOption(option =>
+			.addNumberOption(option =>
 				option
 				.setName("new_map_id")
 				.setDescription("Beatmap ID")
