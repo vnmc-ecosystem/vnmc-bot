@@ -40,6 +40,7 @@ export const map = {
 				option
 				.setName("map_id")
 				.setDescription("Beatmap ID")
+				.setMinValue(1)
 				.setRequired(true)
 			)
 		)
@@ -62,6 +63,7 @@ export const map = {
 				option
 				.setName("new_map_id")
 				.setDescription("Beatmap ID")
+				.setMinValue(1)
 				.setRequired(true)
 			)
 		)
