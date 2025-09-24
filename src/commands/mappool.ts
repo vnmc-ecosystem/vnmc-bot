@@ -1,4 +1,5 @@
 import { SlashCommandBuilder, ChatInputCommandInteraction, EmbedBuilder } from "discord.js";
+import { round_option } from "$lib/options";
 import { strip_colors } from "$lib/constants";
 
 export const mappool = {
@@ -8,32 +9,17 @@ export const mappool = {
 		.addSubcommand(sub => sub
 			.setName("get")
 			.setDescription("View a round's mappool")
-			.addStringOption(option =>
-				option
-				.setName("round")
-				.setDescription("Round name")
-				.setRequired(true)
-			)
+			.addStringOption(round_option)
 		)
 		.addSubcommand(sub => sub
 			.setName("create")
 			.setDescription("Initialize a round's mappool")
-			.addStringOption(option =>
-				option
-				.setName("round")
-				.setDescription("Round name")
-				.setRequired(true)
-			)
+			.addStringOption(round_option)
 		)
 		.addSubcommand(sub => sub
 			.setName("delete")
 			.setDescription("Delete a round's mappool")
-			.addStringOption(option =>
-				option
-				.setName("round")
-				.setDescription("Round name")
-				.setRequired(true)
-			)
+			.addStringOption(round_option)
 		),
 	async execute(interaction: ChatInputCommandInteraction) {
 		const sub = interaction.options.getSubcommand();

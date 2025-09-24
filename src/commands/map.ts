@@ -1,4 +1,5 @@
 import { SlashCommandBuilder, ChatInputCommandInteraction, EmbedBuilder } from "discord.js";
+import { round_option, map_code_option, map_id_option } from "$lib/options";
 import { strip_colors } from "$lib/constants";
 
 export const map = {
@@ -8,80 +9,28 @@ export const map = {
 		.addSubcommand(sub => sub
 			.setName("get")
 			.setDescription("View a map's info")
-			.addStringOption(option =>
-				option
-				.setName("round")
-				.setDescription("Round name")
-				.setRequired(true)
-			)
-			.addStringOption(option =>
-				option
-				.setName("map_code")
-				.setDescription("Map code")
-				.setRequired(true)
-			)
+			.addStringOption(round_option)
+			.addStringOption(map_code_option)
 		)
 		.addSubcommand(sub => sub
 			.setName("add")
 			.setDescription("Add a map to a mappool")
-			.addStringOption(option =>
-				option
-				.setName("round")
-				.setDescription("Round name")
-				.setRequired(true)
-			)
-			.addStringOption(option =>
-				option
-				.setName("map_code")
-				.setDescription("Map code")
-				.setRequired(true)
-			)
-			.addNumberOption(option =>
-				option
-				.setName("map_id")
-				.setDescription("Beatmap ID")
-				.setMinValue(1)
-				.setRequired(true)
-			)
+			.addStringOption(round_option)
+			.addStringOption(map_code_option)
+			.addNumberOption(map_id_option("add"))
 		)
 		.addSubcommand(sub => sub
 			.setName("edit")
 			.setDescription("Edit a map's ID")
-			.addStringOption(option =>
-				option
-				.setName("round")
-				.setDescription("Round name")
-				.setRequired(true)
-			)
-			.addStringOption(option =>
-				option
-				.setName("map_code")
-				.setDescription("Map code")
-				.setRequired(true)
-			)
-			.addNumberOption(option =>
-				option
-				.setName("new_map_id")
-				.setDescription("Beatmap ID")
-				.setMinValue(1)
-				.setRequired(true)
-			)
+			.addStringOption(round_option)
+			.addStringOption(map_code_option)
+			.addNumberOption(map_id_option("edit"))
 		)
 		.addSubcommand(sub => sub
 			.setName("delete")
 			.setDescription("Remove a map from a pool")
-			.addStringOption(option =>
-				option
-				.setName("round")
-				.setDescription("Round name")
-				.setRequired(true)
-			)
-			.addStringOption(option =>
-				option
-				.setName("map_code")
-				.setDescription("Map code")
-				.setRequired(true)
-			)
+			.addStringOption(round_option)
+			.addStringOption(map_code_option)
 		),
 	async execute(interaction: ChatInputCommandInteraction) {
 		const sub = interaction.options.getSubcommand();

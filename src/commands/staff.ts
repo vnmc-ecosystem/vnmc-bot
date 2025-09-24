@@ -1,4 +1,5 @@
 import { SlashCommandBuilder, ChatInputCommandInteraction, EmbedBuilder } from "discord.js";
+import { role_option } from "$lib/options";
 import { strip_colors } from "$lib/constants";
 
 export const staff = {
@@ -8,47 +9,23 @@ export const staff = {
 		.addSubcommand(sub => sub
 			.setName("list")
 			.setDescription("View staff list")
-			.addStringOption(option =>
-				option
-				.setName("role")
-				.setDescription("Staff role")
-			)
+			.addStringOption(role_option(undefined, undefined, true))
 		)
 		.addSubcommand(sub => sub
 			.setName("register")
 			.setDescription("Apply for a staff role")
-			.addStringOption(option =>
-				option
-				.setName("role")
-				.setDescription("Staff role")
-				.setRequired(true)
-			)
+			.addStringOption(role_option())
 		)
 		.addSubcommand(sub => sub
 			.setName("change")
 			.setDescription("Request to change your staff role")
-			.addStringOption(option =>
-				option
-				.setName("old_role")
-				.setDescription("Role to be changed")
-				.setRequired(true)
-			)
-			.addStringOption(option =>
-				option
-				.setName("new_role")
-				.setDescription("Role to change to")
-				.setRequired(true)
-			)
+			.addStringOption(role_option("old_role", "Role to be changed"))
+			.addStringOption(role_option("new_role", "Role to change to"))
 		)
 		.addSubcommand(sub => sub
 			.setName("leave")
 			.setDescription("Leave a staff role")
-			.addStringOption(option =>
-				option
-				.setName("role")
-				.setDescription("Staff role")
-				.setRequired(true)
-			)
+			.addStringOption(role_option())
 		),
 	async execute(interaction: ChatInputCommandInteraction) {
 		const sub = interaction.options.getSubcommand();
